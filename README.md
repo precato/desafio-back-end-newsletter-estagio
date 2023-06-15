@@ -10,18 +10,16 @@
 # :rocket: Sobre o desafio
 Para você já ir se aquecendo para o que está por vir, queremos propor um desafio para você.
 
-Queremos que você implemente um servidor que recebrá inscrições de um formulário. A partir das regas de negócio definidas, você precisará construir uma API REST que realize a inscrição, caso esta seja válida, armamazenando as informações em um banco de dados relacional.
+Queremos que você implemente um servidor que recebrá consulta a uma base de inscrições de um formulário. A partir das regas de negócio definidas, você precisará construir uma API REST que realize uma consulta em um banco de dados utilizando filtro de datas fornecidas na requisição e retorne as informações encontradas.
 
-- **Inscrição no fluxo:** No sistema de captação de leads, temos um formulário de inscrição em um fluxo de mensagens com notícias e informações sobre os precatórios de nossos clientes. Para isso, precisamos de uma API capaz de receber a inscrição pelo formulário e registrá-la no banco dedados.
+- **Consulta por data:** No sistema de captação de leads, temos um formulário de inscrição em um fluxo de mensagens com notícias e informações sobre os precatórios de nossos clientes. As informações coletadas no formulário ficam armazenadas em uma tabela de um banco de dados relacional e queremos extrair relatórios de volume de inscrições de acordo com uma data inicial e uma data final. Para isso, precisamos de uma API capaz de receber a data inicial e a data final, realizar a consulta filtrada no banco de dados e retornar as informações encontradas.
 
 - **Observações:** O desafio deve ser desenvolvido utilizando Javascript ou Typescript, sendo obrigatória a utilização de NodeJS.
 
 ## Regras de negócio
-1. A inscrição só deve ser feita com um email válido.
+1. A consulta só deve ser feita com datas válidas (a data recebida deve ser realmente uma data e a data final não deve ser menor que a data inicial).
 
-2. Não devem ser registradas linhas duplicadas com o mesmo email no banco de dados.
-
-3. A propriedade "created_at" da tabela forms_answers deve ser preenchida com a data de inscrição do formulário.
+2. A propriedade "created_at" da tabela forms_answers deve ser preenchida com a data de inscrição do formulário.
 
 ## Dados
 Para te ajudar a entender um pouco melhor, essa é a entidade da tabela forms_answers, necessária para você resolver o seu desafio.
